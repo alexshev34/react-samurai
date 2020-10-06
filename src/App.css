@@ -1,4 +1,6 @@
 .app-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
 
   grid-template-areas: 
@@ -21,4 +23,8 @@
 .content{
   grid-area: c;
   background-color: blue;
+}
+
+li{
+  list-style: none;
 }
