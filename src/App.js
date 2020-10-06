@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header.jsx';
 import Nav from './components/Nav/Nav.jsx';
 import Profile from './components/Profile/Profile';
@@ -10,7 +11,10 @@ function App() {
     <div className="app-wrapper">
       <Header/>
       <Nav/>
-      <Profile/>
+      <div class="app-wrapper-content">
+        <Dialogs/>
+      </div>
+      {/* <Profile/> */}
     </div>
   );
 }

@@ -4,25 +4,15 @@
   display: grid;
 
   grid-template-areas: 
-  "h h h"
-  "nav c c";
+  "h h"
+  "nav c";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
 }
 
-.header{
-  grid-area: h;
-  background-color: green;
-}
-
-.nav{
-  grid-area: nav;
-  background-color: yellow;
-}
-
-.content{
-  grid-area: c;
-  background-color: blue;
+.app-wrapper-content{
+    grid-area: c;
+    background-color: blue;
 }
 
 li{
