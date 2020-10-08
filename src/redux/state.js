@@ -6,6 +6,7 @@
             {id: 1, message: 'Hi, how are you ?', likesCount: 12},
             {id: 2, message: "It's my first post", likesCount: 11}
         ],
+        newPostText: 'it-weber.com'
       },
       dialogsPage: {
         messages: [
@@ -26,14 +27,18 @@
       } 
 }
 export let addPost = (postMessage) => {
-    let newPost = {
-      id: 5,
-      message: postMessage,
-      likesCount: 0
-    };
+  let newPost = {
+    id: 5,
+     message: postMessage,
+    likesCount: 0
+  };
+  state.profilePage.posts.push(newPost);
+  rerenderEntireTree(state);
+}
 
-    state.profilePage.posts.push(newPost);
-    rerenderEntireTree(state);
-  }
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+}
 
 export default state;
